@@ -1,0 +1,7 @@
+<resources>
+
+    <!-- Default colors. -->
+    <color name="app_main_color">#3f889e</color>
+    <color name="footer_menu_color">#232323</color>
+
+</resources>
