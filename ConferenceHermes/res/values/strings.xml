@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">ConferenceHermes</string>
+    <string name="api_key">AIzaSyB7hVn7WyU9HQl0D7C8fSDXEnIdR17ZvhM</string>
     <string name="action_settings">Settings</string>
     <string name="centres_title">LES CENTRES</string>
     <string name="footer_menu_text">ACCÉDER AU SITE WEB CONFERENCE-HERMES.FR</string>
