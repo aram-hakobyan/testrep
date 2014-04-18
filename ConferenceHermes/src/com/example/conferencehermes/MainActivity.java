@@ -1,5 +1,7 @@
 package com.example.conferencehermes;
 
+import com.example.conferencehermes.util.Utilities;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +22,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		findViewById(R.id.startButton2).setOnClickListener(this);
 		findViewById(R.id.startButton3).setOnClickListener(this);
 		findViewById(R.id.startButton4).setOnClickListener(this);
+		findViewById(R.id.mainInfoBtn).setOnClickListener(this);
 	}
 
 	@Override
@@ -42,7 +45,11 @@ public class MainActivity extends Activity implements OnClickListener {
 			intent = new Intent(MainActivity.this, MapActivity.class);
 			break;
 		case R.id.startButton4:
-			intent = new Intent(MainActivity.this, ContactActivity.class);
+			// intent = new Intent(MainActivity.this, ContactActivity.class);
+			Utilities.phoneCall(MainActivity.this);
+			break;
+		case R.id.mainInfoBtn:
+			Utilities.showInfoDialog(MainActivity.this);
 			break;
 		}
 		if (intent != null)
