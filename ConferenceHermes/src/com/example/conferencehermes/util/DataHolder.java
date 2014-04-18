@@ -9,11 +9,13 @@ public class DataHolder {
 	private ArrayList<News> newsArray;
 	private ArrayList<Location> locations;
 	private ArrayList<Place> places;
+	private int CURRENT_PAGE;
 
 	private DataHolder() {
 		setNewsArray(new ArrayList<News>());
 		setLocations(new ArrayList<Location>());
 		setPlaces(new ArrayList<Place>());
+		setCURRENT_PAGE(0);
 	}
 
 	public static DataHolder getInstance() {
@@ -46,5 +48,13 @@ public class DataHolder {
 
 	public void setPlaces(ArrayList<Place> places) {
 		this.places = places;
+	}
+
+	public int getCURRENT_PAGE() {
+		return CURRENT_PAGE;
+	}
+
+	public void setCURRENT_PAGE(int cURRENT_PAGE) {
+		CURRENT_PAGE = cURRENT_PAGE;
 	}
 }

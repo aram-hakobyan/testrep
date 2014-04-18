@@ -1,16 +1,17 @@
 package com.example.conferencehermes;
 
-import com.example.conferencehermes.util.Utilities;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 
-public class MainActivity extends Activity implements OnClickListener {
+import com.example.conferencehermes.util.Constants;
+import com.example.conferencehermes.util.Utilities;
+
+public class MainActivity extends FragmentActivity implements OnClickListener {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +37,16 @@ public class MainActivity extends Activity implements OnClickListener {
 		Intent intent = null;
 		switch (v.getId()) {
 		case R.id.startButton1:
-			intent = new Intent(MainActivity.this, InfoActivity.class);
+			intent = new Intent(MainActivity.this, MyFragmentActivity.class);
+			intent.putExtra("PAGE_ID", Constants.INFO_FRAGMENT);
 			break;
 		case R.id.startButton2:
-			intent = new Intent(MainActivity.this, NewsActivity.class);
+			intent = new Intent(MainActivity.this, MyFragmentActivity.class);
+			intent.putExtra("PAGE_ID", Constants.NEWS_FRAGMENT);
 			break;
 		case R.id.startButton3:
-			intent = new Intent(MainActivity.this, MapActivity.class);
+			intent = new Intent(MainActivity.this, MyFragmentActivity.class);
+			intent.putExtra("PAGE_ID", Constants.MAP_FRAGMENT);
 			break;
 		case R.id.startButton4:
 			// intent = new Intent(MainActivity.this, ContactActivity.class);
@@ -55,4 +59,5 @@ public class MainActivity extends Activity implements OnClickListener {
 		if (intent != null)
 			startActivity(intent);
 	}
+
 }

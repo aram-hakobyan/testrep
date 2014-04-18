@@ -3,21 +3,21 @@ package com.example.conferencehermes;
 import java.util.ArrayList;
 
 import android.app.Dialog;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.util.TypedValue;
 import android.view.Gravity;
-import android.view.Menu;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.example.conferencehermes.util.Constants;
 import com.example.conferencehermes.util.DataHolder;
 import com.example.conferencehermes.util.Place;
-import com.example.conferencehermes.util.Utilities;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -27,24 +27,20 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapActivity extends FragmentActivity implements OnClickListener {
+public class MapFragment extends Fragment {
 	private GoogleMap mMap;
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.activity_map);
-
-		findViewById(R.id.mapviewBtnCall).setOnClickListener(this);
-		findViewById(R.id.mapviewBtnGrads).setOnClickListener(this);
-		findViewById(R.id.mapviewBtnInfo).setOnClickListener(this);
-		findViewById(R.id.mapviewBtnPin).setOnClickListener(this);
-		findViewById(R.id.mapviewBtnSpeech).setOnClickListener(this);
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		View fragment = inflater.inflate(R.layout.activity_map, container,
+				false);
+		DataHolder.getInstance().setCURRENT_PAGE(Constants.MAP_FRAGMENT);
 
 		if (mMap == null) {
-			mMap = ((SupportMapFragment) getSupportFragmentManager()
-					.findFragmentById(R.id.mapview)).getMap();
+			mMap = ((SupportMapFragment) getActivity()
+					.getSupportFragmentManager().findFragmentById(R.id.mapview))
+					.getMap();
 			if (mMap != null) {
 				mMap.getUiSettings().setCompassEnabled(true);
 				mMap.getUiSettings().setRotateGesturesEnabled(true);
@@ -73,12 +69,21 @@ public class MapActivity extends FragmentActivity implements OnClickListener {
 			}
 		}
 
+		return fragment;
+
 	}
 
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.map, menu);
-		return false;
+	public void onDestroyView() {
+		super.onDestroyView();
+		Fragment fragment = (getActivity().getSupportFragmentManager()
+				.findFragmentById(R.id.mapview));
+		if (fragment.isResumed()) {
+			FragmentTransaction ft = getActivity().getSupportFragmentManager()
+					.beginTransaction();
+			ft.remove(fragment);
+			ft.commit();
+		}
 	}
 
 	private void drawMarkers(ArrayList<Place> places) {
@@ -97,7 +102,7 @@ public class MapActivity extends FragmentActivity implements OnClickListener {
 			mMap.setOnInfoWindowClickListener(new OnInfoWindowClickListener() {
 				@Override
 				public void onInfoWindowClick(Marker marker) {
-					Dialog dialog = new Dialog(MapActivity.this,
+					Dialog dialog = new Dialog(getActivity(),
 							R.style.DialogSlideAnim);
 					dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 					dialog.getWindow().clearFlags(
@@ -133,33 +138,4 @@ public class MapActivity extends FragmentActivity implements OnClickListener {
 
 	}
 
-	@Override
-	public void onClick(View v) {
-		Intent intent = null;
-		switch (v.getId()) {
-		case R.id.mapviewBtnCall:
-			Utilities.phoneCall(MapActivity.this);
-			break;
-		case R.id.mapviewBtnGrads:
-			intent = new Intent(MapActivity.this, InfoActivity.class);
-			break;
-		case R.id.mapviewBtnInfo:
-			Utilities.showInfoDialog(MapActivity.this);
-			break;
-		case R.id.mapviewBtnPin:
-
-			break;
-		case R.id.mapviewBtnSpeech:
-			intent = new Intent(MapActivity.this, NewsActivity.class);
-			break;
-
-		default:
-			break;
-		}
-		if (intent != null) {
-			startActivity(intent);
-			finish();
-		}
-
-	}
 }

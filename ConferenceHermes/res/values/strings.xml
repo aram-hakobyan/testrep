@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ConferenceHermes</string>
+    <string name="app_name">Conference Hermes</string>
     <string name="api_key">AIzaSyB7hVn7WyU9HQl0D7C8fSDXEnIdR17ZvhM</string>
     <string name="action_settings">Settings</string>
     <string name="centres_title">LES CENTRES</string>
@@ -27,5 +27,7 @@ Dat enim intervalla et relaxat. Sed nimis multa. Quod quidem iam fit etiam in Ac
 Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Sin aliud quid voles, postea. Quid de Pythagora? Tum Triarius: Posthac quidem, inquit, audacius.
 
 Hunc vos beatum; Nam, ut sint illa vendibiliora, haec uberiora certe sunt. Non est igitur summum malum dolor. Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius. Illud mihi a te nimium festinanter dictum videtur, sapientis omnis esse semper beatos; Non modo carum sibi quemque, verum etiam vehementer carum esse? Cur id non ita fit? Facillimum id quidem est, inquam.</string>
+    <string name="title_activity_tab_fragment">TabFragmentActivity</string>
+    <string name="title_activity_my_fragment">MyFragmentActivity</string>
 
 </resources>

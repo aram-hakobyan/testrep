@@ -1,8 +1,5 @@
 package com.example.conferencehermes.util;
 
-import com.example.conferencehermes.MapActivity;
-import com.example.conferencehermes.R;
-
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -10,11 +7,18 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
-import android.util.TypedValue;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.Gravity;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.TextView;
+
+import com.example.conferencehermes.InfoFragment;
+import com.example.conferencehermes.MapFragment;
+import com.example.conferencehermes.NewsFragment;
+import com.example.conferencehermes.R;
 
 public class Utilities {
 	private static ProgressDialog mDialog;
@@ -24,6 +28,33 @@ public class Utilities {
 		callIntent.setData(Uri.parse("tel:" + "+0102030405"));
 		context.startActivity(callIntent);
 	};
+
+	public static void selectFrag(FragmentActivity a, int PAGE_ID) {
+		Fragment fr = null;
+
+		switch (PAGE_ID) {
+		case 0:
+			fr = new InfoFragment();
+			break;
+		case 1:
+			fr = new MapFragment();
+			break;
+		case 2:
+			fr = new NewsFragment();
+			break;
+
+		default:
+			break;
+		}
+
+		if (fr != null) {
+			FragmentManager fm = a.getSupportFragmentManager();
+			FragmentTransaction fragmentTransaction = fm.beginTransaction();
+			fragmentTransaction.replace(R.id.fragmentContainer, fr);
+			fragmentTransaction.commit();
+		}
+
+	}
 
 	public static void showOrHideActivityIndicator(Context ctx, final int hide,
 			final String message) {

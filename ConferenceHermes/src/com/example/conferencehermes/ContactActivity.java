@@ -41,7 +41,7 @@ public class ContactActivity extends Activity implements OnClickListener {
 
 			break;
 		case R.id.contactBtnInfo:
-			startActivity(new Intent(ContactActivity.this, InfoActivity.class));
+			startActivity(new Intent(ContactActivity.this, InfoFragment.class));
 			break;
 		case R.id.contactBtnPin:
 
