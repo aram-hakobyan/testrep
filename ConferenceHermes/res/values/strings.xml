@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Conference Hermes</string>
-    <string name="api_key">AIzaSyB7hVn7WyU9HQl0D7C8fSDXEnIdR17ZvhM</string>
+    <string name="app_name">Conferénce Hermés</string>
+    <string name="api_key">AIzaSyATOj1LV7DA5iLmzHhXybZXgBVBf_Rc9kk</string>
     <string name="action_settings">Settings</string>
     <string name="centres_title">LES CENTRES</string>
-    <string name="footer_menu_text">ACCÉDER AU SITE WEB CONFERENCE-HERMES.FR</string>
+    <string name="footer_menu_text">CONFERENCE-HERMES.FR</string>
     <string name="main_menu_text1">QUI SOMMES-NOUS</string>
     <string name="main_menu_text2">ACTUALITÉS</string>
     <string name="main_menu_text3">LES CENTRES PRÉS DE CHEZ VOUS</string>

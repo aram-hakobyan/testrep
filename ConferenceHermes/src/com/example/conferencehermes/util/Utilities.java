@@ -112,4 +112,10 @@ public class Utilities {
 		return false;
 	}
 
+	public static void openWebsite(Context c) {
+		Intent browserIntent1 = new Intent(Intent.ACTION_VIEW,
+				Uri.parse("http://www.conference-hermes.fr"));
+		c.startActivity(browserIntent1);
+	}
+
 }

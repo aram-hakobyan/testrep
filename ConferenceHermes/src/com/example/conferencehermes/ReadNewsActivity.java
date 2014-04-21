@@ -1,6 +1,7 @@
 package com.example.conferencehermes;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.TextView;
 
+import com.example.conferencehermes.util.Constants;
 import com.example.conferencehermes.util.DataHolder;
 import com.example.conferencehermes.util.News;
 import com.example.conferencehermes.util.Utilities;
@@ -20,7 +22,12 @@ public class ReadNewsActivity extends Activity implements OnClickListener {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_read_news);
 
+		findViewById(R.id.readnewsBtnCall).setOnClickListener(this);
+		findViewById(R.id.readnewsBtnGrads).setOnClickListener(this);
+		findViewById(R.id.readnewsBtnPin).setOnClickListener(this);
+		findViewById(R.id.readnewsBtnSpeech).setOnClickListener(this);
 		findViewById(R.id.readnewsBtnInfo).setOnClickListener(this);
+		findViewById(R.id.retourLayout).setOnClickListener(this);
 
 		int newsId = getIntent().getIntExtra("newsId", -1);
 		if (newsId > -1) {
@@ -41,14 +48,37 @@ public class ReadNewsActivity extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
+		Intent intent = null;
 		switch (v.getId()) {
-
+		case R.id.readnewsBtnCall:
+			Utilities.phoneCall(ReadNewsActivity.this);
+			break;
+		case R.id.readnewsBtnGrads:
+			intent = new Intent(ReadNewsActivity.this, MyFragmentActivity.class);
+			intent.putExtra("PAGE_ID", Constants.INFO_FRAGMENT);
+			break;
+		case R.id.readnewsBtnPin:
+			intent = new Intent(ReadNewsActivity.this, MyFragmentActivity.class);
+			intent.putExtra("PAGE_ID", Constants.MAP_FRAGMENT);
+			break;
+		case R.id.readnewsBtnSpeech:
+			intent = new Intent(ReadNewsActivity.this, MyFragmentActivity.class);
+			intent.putExtra("PAGE_ID", Constants.NEWS_FRAGMENT);
+			break;
 		case R.id.readnewsBtnInfo:
 			Utilities.showInfoDialog(ReadNewsActivity.this);
+			break;
+		case R.id.retourLayout:
+			finish();
 			break;
 
 		default:
 			break;
+		}
+
+		if (intent != null) {
+			startActivity(intent);
+			finish();
 		}
 
 	}

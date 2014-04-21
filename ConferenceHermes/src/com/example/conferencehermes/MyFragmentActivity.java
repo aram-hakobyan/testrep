@@ -1,5 +1,7 @@
 package com.example.conferencehermes;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -31,6 +33,7 @@ public class MyFragmentActivity extends FragmentActivity implements
 		findViewById(R.id.viewBtnInfo).setOnClickListener(this);
 		findViewById(R.id.viewBtnPin).setOnClickListener(this);
 		findViewById(R.id.viewBtnSpeech).setOnClickListener(this);
+		findViewById(R.id.footer_menu_text).setOnClickListener(this);
 		title = (TextView) findViewById(R.id.titleTextView);
 
 		int PAGE_ID = getIntent().getIntExtra("PAGE_ID", 0);
@@ -90,6 +93,9 @@ public class MyFragmentActivity extends FragmentActivity implements
 		case R.id.viewBtnSpeech:
 			title.setText(getResources().getString(R.string.main_menu_text2));
 			Utilities.selectFrag(this, Constants.NEWS_FRAGMENT);
+			break;
+		case R.id.footer_menu_text:
+			Utilities.openWebsite(MyFragmentActivity.this);
 			break;
 
 		default:

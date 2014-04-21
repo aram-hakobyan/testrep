@@ -1,6 +1,7 @@
 package com.example.conferencehermes;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
@@ -24,6 +25,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		findViewById(R.id.startButton3).setOnClickListener(this);
 		findViewById(R.id.startButton4).setOnClickListener(this);
 		findViewById(R.id.mainInfoBtn).setOnClickListener(this);
+		findViewById(R.id.mainFooterText).setOnClickListener(this);
 	}
 
 	@Override
@@ -54,6 +56,9 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			break;
 		case R.id.mainInfoBtn:
 			Utilities.showInfoDialog(MainActivity.this);
+			break;
+		case R.id.mainFooterText:
+			Utilities.openWebsite(MainActivity.this);
 			break;
 		}
 		if (intent != null)
