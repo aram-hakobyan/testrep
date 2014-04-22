@@ -35,25 +35,26 @@
     <LinearLayout
         android:id="@+id/retourLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="60dp"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:orientation="horizontal" >
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
+            android:adjustViewBounds="true"
             android:src="@drawable/back_arrow" >
         </ImageView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:gravity="center"
             android:text="RETOUR"
             android:textColor="@color/app_main_color"
@@ -61,61 +62,75 @@
         </TextView>
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="120dp"
+        android:background="@color/app_main_color" >
+    </View>
+
     <ScrollView
         android:id="@+id/scrollViewReadNews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp" >
+        android:layout_marginTop="140dp" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:src="@drawable/news_image_left" >
-            </ImageView>
+            android:orientation="vertical" >
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:orientation="vertical" >
+                android:orientation="horizontal" >
 
-                <TextView
-                    android:id="@+id/read_news_title"
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/news_image_left" >
+                </ImageView>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center"
-                    android:textColor="@color/app_main_color"
-                    android:textSize="30sp" >
-                </TextView>
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical" >
 
-                <TextView
-                    android:id="@+id/read_news_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:padding="15dp"
-                    android:textColor="#616161"
-                    android:textSize="20sp" >
-                </TextView>
+                    <TextView
+                        android:id="@+id/read_news_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="title"
+                        android:textColor="@color/app_main_color"
+                        android:textSize="20sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/read_news_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingRight="20dp"
+                        android:text="text"
+                        android:textColor="#616161"
+                        android:textSize="20sp" >
+                    </TextView>
+                </LinearLayout>
             </LinearLayout>
 
             <TextView
                 android:id="@+id/read_news_text2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:padding="15dp"
+                android:padding="10dp"
+                android:text="@string/lorem_ipsum"
                 android:textColor="#616161"
                 android:textSize="20sp" >
             </TextView>

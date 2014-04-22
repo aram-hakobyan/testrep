@@ -34,6 +34,8 @@ int color footer_menu_color 0x7f05000b
 int dimen activity_horizontal_margin 0x7f090000
 int dimen activity_vertical_margin 0x7f090001
 int dimen main_buttons_height 0x7f090003
+int dimen main_buttons_textsize 0x7f090005
+int dimen main_buttons_topmargin 0x7f090004
 int dimen main_buttons_width 0x7f090002
 int drawable back_arrow 0x7f020000
 int drawable comments 0x7f020001

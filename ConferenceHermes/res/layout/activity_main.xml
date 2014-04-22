@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="@dimen/main_buttons_topmargin"
         android:gravity="center"
         android:orientation="vertical" >
 
@@ -61,7 +61,7 @@
                     android:gravity="center"
                     android:text="@string/main_menu_text1"
                     android:textColor="@android:color/white"
-                    android:textSize="30sp" />
+                    android:textSize="@dimen/main_buttons_textsize" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -90,7 +90,7 @@
                     android:gravity="center"
                     android:text="@string/main_menu_text2"
                     android:textColor="@android:color/white"
-                    android:textSize="30sp" />
+                    android:textSize="@dimen/main_buttons_textsize" />
             </RelativeLayout>
         </LinearLayout>
 
@@ -126,7 +126,7 @@
                     android:gravity="center"
                     android:text="@string/main_menu_text3"
                     android:textColor="@android:color/white"
-                    android:textSize="30sp" />
+                    android:textSize="@dimen/main_buttons_textsize" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -155,7 +155,7 @@
                     android:gravity="center"
                     android:text="@string/main_menu_text4"
                     android:textColor="@android:color/white"
-                    android:textSize="30sp" />
+                    android:textSize="@dimen/main_buttons_textsize" />
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
