@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.conferencehermes.MyFragmentActivity" >
+    tools:context="fr.conferencehermes.hermesapp.activities.MyFragmentActivity" >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
 
         <fragment
             android:id="@+id/myFragment"
-            android:name="com.example.conferencehermes.InfoFragment"
+            android:name="com.conferencehermes.hermesapp.fragments.InfoFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </FrameLayout>
