@@ -11,55 +11,10 @@
         android:orientation="vertical"
         android:padding="10dp" >
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="@string/lorem_ipsum"
-            android:textColor="#616161"
-            android:textSize="15sp" >
-        </TextView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="@string/lorem_ipsum"
-            android:textColor="#616161"
-            android:textSize="15sp" >
-        </TextView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="@string/lorem_ipsum"
-            android:textColor="#616161"
-            android:textSize="15sp" >
-        </TextView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="@string/lorem_ipsum"
-            android:textColor="#616161"
-            android:textSize="15sp" >
-        </TextView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="@string/lorem_ipsum"
-            android:textColor="#616161"
-            android:textSize="15sp" >
-        </TextView>
+        <WebView
+            android:id="@+id/webviewInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
     </LinearLayout>
 
 </ScrollView>
