@@ -7,5 +7,9 @@
     <dimen name="main_buttons_height">240dp</dimen>
     <dimen name="main_buttons_topmargin">100dp</dimen>
     <dimen name="main_buttons_textsize">20sp</dimen>
+    
+    <dimen name="main_buttons_leftmargin">40dp</dimen>
+    <dimen name="join_button_h">80dp</dimen>
+    <dimen name="join_button_w">320dp</dimen>
 
 </resources>

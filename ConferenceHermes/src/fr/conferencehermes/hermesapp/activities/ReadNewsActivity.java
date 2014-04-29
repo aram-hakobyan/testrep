@@ -7,14 +7,19 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.ImageView;
 import android.widget.TextView;
 import fr.conferencehermes.hermesapp.R;
+import fr.conferencehermes.hermesapp.imageloader.ImageLoader;
 import fr.conferencehermes.hermesapp.util.Constants;
 import fr.conferencehermes.hermesapp.util.DataHolder;
 import fr.conferencehermes.hermesapp.util.News;
 import fr.conferencehermes.hermesapp.util.Utilities;
 
 public class ReadNewsActivity extends Activity implements OnClickListener {
+	private WebView webview;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,14 +33,31 @@ public class ReadNewsActivity extends Activity implements OnClickListener {
 		findViewById(R.id.readnewsBtnSpeech).setOnClickListener(this);
 		findViewById(R.id.readnewsBtnInfo).setOnClickListener(this);
 		findViewById(R.id.retourLayout).setOnClickListener(this);
+		findViewById(R.id.readnewsFooterText).setOnClickListener(this);
 
 		int newsId = getIntent().getIntExtra("newsId", -1);
 		if (newsId > -1) {
 			News news = DataHolder.getInstance().getNewsArray().get(newsId);
 			TextView title = (TextView) findViewById(R.id.read_news_title);
 			TextView text = (TextView) findViewById(R.id.read_news_text);
+			ImageView img = (ImageView) findViewById(R.id.read_news_title_image);
+
 			title.setText(news.getTitle());
 			text.setText(news.getDesc());
+			int loader = R.drawable.news_image_left;
+			String image_url = news.getImage();
+			ImageLoader imgLoader = new ImageLoader(ReadNewsActivity.this);
+			imgLoader.DisplayImage(image_url, loader, img);
+
+			webview = (WebView) findViewById(R.id.webviewReadNews);
+			webview.loadUrl(news.getHtml() + "&" + Constants.AUTH_TOKEN);
+			webview.setWebViewClient(new WebViewClient() {
+				@Override
+				public boolean shouldOverrideUrlLoading(WebView view, String url) {
+					view.loadUrl(url);
+					return true;
+				}
+			});
 		}
 	}
 
@@ -70,6 +92,9 @@ public class ReadNewsActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.retourLayout:
 			finish();
+			break;
+		case R.id.readnewsFooterText:
+			Utilities.openWebsite(ReadNewsActivity.this);
 			break;
 
 		default:

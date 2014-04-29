@@ -2,14 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     tools:context=".ReadNewsActivity" >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:background="@color/app_main_color"
-        android:padding="5dp" >
+        android:background="@color/app_main_color" >
 
         <ImageView
             android:layout_width="wrap_content"
@@ -28,23 +28,23 @@
             android:gravity="center"
             android:text="@string/main_menu_text2"
             android:textColor="@android:color/white"
-            android:textSize="25sp" >
+            android:textSize="@dimen/menu_title_size" >
         </TextView>
     </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/retourLayout"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/retour_height"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="@dimen/retour_height"
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
         <ImageView
-            android:layout_width="30dp"
+            android:layout_width="@dimen/menu_button_size"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:adjustViewBounds="true"
@@ -58,14 +58,14 @@
             android:gravity="center"
             android:text="RETOUR"
             android:textColor="@color/app_main_color"
-            android:textSize="30sp" >
+            android:textSize="@dimen/retour_size" >
         </TextView>
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="@dimen/readnewslinemargin"
         android:background="@color/app_main_color" >
     </View>
 
@@ -87,8 +87,9 @@
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="90dp"
+                    android:id="@+id/read_news_title_image"
+                    android:layout_width="@dimen/readnews_image_w"
+                    android:layout_height="@dimen/readnews_image_h"
                     android:layout_marginLeft="20dp"
                     android:src="@drawable/news_image_left" >
                 </ImageView>
@@ -104,7 +105,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="title"
                         android:textColor="@color/app_main_color"
                         android:textSize="20sp" >
                     </TextView>
@@ -116,24 +116,17 @@
                         android:layout_marginTop="10dp"
                         android:gravity="center_vertical"
                         android:paddingRight="20dp"
-                        android:text="text"
                         android:textColor="#616161"
-                        android:textSize="20sp" >
+                        android:textSize="@dimen/readnewstextsize" >
                     </TextView>
                 </LinearLayout>
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/read_news_text2"
-                android:layout_width="match_parent"
+            <WebView
+                android:id="@+id/webviewReadNews"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:padding="10dp"
-                android:text="@string/lorem_ipsum"
-                android:textColor="#616161"
-                android:textSize="20sp" >
-            </TextView>
+                android:layout_marginTop="30dp" />
         </LinearLayout>
     </ScrollView>
 
@@ -145,6 +138,7 @@
         android:padding="10dp" >
 
         <TextView
+            android:id="@+id/readnewsFooterText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -152,7 +146,7 @@
             android:layout_marginLeft="5dp"
             android:text="@string/footer_menu_text"
             android:textColor="@android:color/white"
-            android:textSize="15sp" >
+            android:textSize="@dimen/menu_footer_title_size" >
         </TextView>
 
         <LinearLayout
@@ -166,40 +160,40 @@
 
             <ImageView
                 android:id="@+id/readnewsBtnGrads"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="@dimen/menu_button_size"
+                android:layout_height="@dimen/menu_button_size"
                 android:src="@drawable/graduate" >
             </ImageView>
 
             <ImageView
                 android:id="@+id/readnewsBtnSpeech"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="30dp"
+                android:layout_width="@dimen/menu_button_size"
+                android:layout_height="@dimen/menu_button_size"
+                android:layout_marginLeft="@dimen/menu_button_size"
                 android:src="@drawable/speech_bubble" >
             </ImageView>
 
             <ImageView
                 android:id="@+id/readnewsBtnPin"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="30dp"
+                android:layout_width="@dimen/menu_button_size"
+                android:layout_height="@dimen/menu_button_size"
+                android:layout_marginLeft="@dimen/menu_button_size"
                 android:src="@drawable/map_pin" >
             </ImageView>
 
             <ImageView
                 android:id="@+id/readnewsBtnCall"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="30dp"
+                android:layout_width="@dimen/menu_button_size"
+                android:layout_height="@dimen/menu_button_size"
+                android:layout_marginLeft="@dimen/menu_button_size"
                 android:src="@drawable/phone" >
             </ImageView>
 
             <ImageView
                 android:id="@+id/readnewsBtnInfo"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="30dp"
+                android:layout_width="@dimen/menu_button_size"
+                android:layout_height="@dimen/menu_button_size"
+                android:layout_marginLeft="@dimen/menu_button_size"
                 android:src="@drawable/info_button" >
             </ImageView>
         </LinearLayout>

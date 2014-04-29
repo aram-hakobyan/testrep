@@ -1,6 +1,5 @@
 package fr.conferencehermes.hermesapp.activities;
 
-import com.conferencehermes.hermesapp.fragments.InfoFragment;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import fr.conferencehermes.hermesapp.R;
+import fr.conferencehermes.hermesapp.fragments.InfoFragment;
 import fr.conferencehermes.hermesapp.util.Utilities;
 
 public class ContactActivity extends Activity implements OnClickListener {

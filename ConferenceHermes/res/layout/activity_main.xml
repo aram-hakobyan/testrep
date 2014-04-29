@@ -68,7 +68,7 @@
                 android:id="@+id/startButton2"
                 android:layout_width="@dimen/main_buttons_width"
                 android:layout_height="@dimen/main_buttons_height"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="@dimen/main_buttons_leftmargin"
                 android:background="@drawable/main_menu_btn_2" >
 
                 <ImageView
@@ -133,7 +133,7 @@
                 android:id="@+id/startButton4"
                 android:layout_width="@dimen/main_buttons_width"
                 android:layout_height="@dimen/main_buttons_height"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="@dimen/main_buttons_leftmargin"
                 android:background="@drawable/main_menu_btn_4" >
 
                 <ImageView
@@ -161,17 +161,18 @@
     </LinearLayout>
 
     <Button
-        android:layout_width="320dp"
-        android:layout_height="80dp"
+        android:id="@+id/joinButton"
+        android:layout_width="@dimen/join_button_w"
+        android:layout_height="@dimen/join_button_h"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="@dimen/join_button_marginbottom"
         android:background="@drawable/green_btn_main"
         android:gravity="center"
         android:paddingLeft="70dp"
         android:text="@string/register_button_text"
         android:textColor="@android:color/white"
-        android:textSize="23sp" >
+        android:textSize="@dimen/join_button_textsize" >
     </Button>
 
     <RelativeLayout

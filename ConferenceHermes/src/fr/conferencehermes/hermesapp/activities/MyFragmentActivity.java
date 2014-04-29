@@ -1,8 +1,5 @@
 package fr.conferencehermes.hermesapp.activities;
 
-import com.conferencehermes.hermesapp.fragments.InfoFragment;
-import com.conferencehermes.hermesapp.fragments.MapFragment;
-import com.conferencehermes.hermesapp.fragments.NewsFragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,6 +12,9 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.TextView;
 import fr.conferencehermes.hermesapp.R;
+import fr.conferencehermes.hermesapp.fragments.InfoFragment;
+import fr.conferencehermes.hermesapp.fragments.MapFragment;
+import fr.conferencehermes.hermesapp.fragments.NewsFragment;
 import fr.conferencehermes.hermesapp.util.Constants;
 import fr.conferencehermes.hermesapp.util.DataHolder;
 import fr.conferencehermes.hermesapp.util.Utilities;

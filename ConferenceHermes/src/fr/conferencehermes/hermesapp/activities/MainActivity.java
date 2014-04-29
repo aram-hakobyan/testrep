@@ -21,6 +21,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -56,6 +57,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		findViewById(R.id.startButton4).setOnClickListener(this);
 		findViewById(R.id.mainInfoBtn).setOnClickListener(this);
 		findViewById(R.id.mainFooterText).setOnClickListener(this);
+		findViewById(R.id.joinButton).setOnClickListener(this);
 	}
 
 	@Override
@@ -81,7 +83,6 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			intent.putExtra("PAGE_ID", Constants.MAP_FRAGMENT);
 			break;
 		case R.id.startButton4:
-			// intent = new Intent(MainActivity.this, ContactActivity.class);
 			Utilities.phoneCall(MainActivity.this);
 			break;
 		case R.id.mainInfoBtn:
@@ -89,6 +90,11 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			break;
 		case R.id.mainFooterText:
 			Utilities.openWebsite(MainActivity.this);
+			break;
+		case R.id.joinButton:
+			Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+					Uri.parse(DataHolder.getInstance().getJoinURL()));
+			startActivity(browserIntent);
 			break;
 		}
 		if (intent != null)
@@ -207,6 +213,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 						.setAboutURL(jObject.getString("about"));
 				DataHolder.getInstance().setInfoURL(jObject.getString("info"));
 				DataHolder.getInstance().setPhone(jObject.getString("phone"));
+				DataHolder.getInstance().setJoinURL(
+						jObject.getString("join_us"));
 
 			} catch (JSONException e) {
 				Log.e("JSONException", "Error: " + e.toString());

@@ -189,6 +189,7 @@ containing a value of this type.
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
+ Default screen margins, per the Android Design guidelines. 
 
          Example customization of dimensions originally defined in res/values/dimens.xml
          (such as screen margins) for screens with more than 820dp of available width. This
@@ -199,10 +200,29 @@ containing a value of this type.
          */
         public static final int activity_horizontal_margin=0x7f090000;
         public static final int activity_vertical_margin=0x7f090001;
+        public static final int info_dialog_h=0x7f090010;
+        public static final int info_dialog_w=0x7f09000f;
+        public static final int join_button_h=0x7f090007;
+        public static final int join_button_marginbottom=0x7f09000a;
+        public static final int join_button_textsize=0x7f090009;
+        public static final int join_button_w=0x7f090008;
         public static final int main_buttons_height=0x7f090003;
+        public static final int main_buttons_leftmargin=0x7f090006;
         public static final int main_buttons_textsize=0x7f090005;
         public static final int main_buttons_topmargin=0x7f090004;
         public static final int main_buttons_width=0x7f090002;
+        public static final int menu_button_size=0x7f09000b;
+        public static final int menu_footer_title_size=0x7f09000d;
+        public static final int menu_margin=0x7f09000e;
+        public static final int menu_title_size=0x7f09000c;
+        public static final int news_image_width=0x7f090011;
+        public static final int news_right_margin=0x7f090012;
+        public static final int readnews_image_h=0x7f090014;
+        public static final int readnews_image_w=0x7f090013;
+        public static final int readnewslinemargin=0x7f090018;
+        public static final int readnewstextsize=0x7f090016;
+        public static final int retour_height=0x7f090017;
+        public static final int retour_size=0x7f090015;
     }
     public static final class drawable {
         public static final int back_arrow=0x7f020000;
@@ -252,19 +272,20 @@ containing a value of this type.
         public static final int speech_bubble=0x7f02002c;
     }
     public static final class id {
-        public static final int action_settings=0x7f060036;
+        public static final int action_settings=0x7f060039;
         public static final int contactBtnCall=0x7f060009;
         public static final int contactBtnGrads=0x7f060006;
         public static final int contactBtnInfo=0x7f06000a;
         public static final int contactBtnPin=0x7f060008;
         public static final int contactBtnSpeech=0x7f060007;
-        public static final int footer_menu_text=0x7f06001e;
-        public static final int fragmentContainer=0x7f06001c;
+        public static final int footer_menu_text=0x7f06001f;
+        public static final int fragmentContainer=0x7f06001d;
         public static final int hybrid=0x7f060004;
-        public static final int infoDialogTitle=0x7f060031;
-        public static final int listViewNews=0x7f060024;
-        public static final int mainFooterText=0x7f060019;
-        public static final int mainInfoBtn=0x7f060018;
+        public static final int infoDialogTitle=0x7f060034;
+        public static final int joinButton=0x7f060018;
+        public static final int listViewNews=0x7f060025;
+        public static final int mainFooterText=0x7f06001a;
+        public static final int mainInfoBtn=0x7f060019;
         public static final int main_menu_image1=0x7f06000d;
         public static final int main_menu_image2=0x7f060010;
         public static final int main_menu_image3=0x7f060013;
@@ -273,40 +294,42 @@ containing a value of this type.
         public static final int main_menu_text2=0x7f060011;
         public static final int main_menu_text3=0x7f060014;
         public static final int main_menu_text4=0x7f060017;
-        public static final int mapview=0x7f06001a;
-        public static final int myFragment=0x7f06001d;
-        public static final int newsArrow=0x7f060035;
-        public static final int newsImage=0x7f060032;
-        public static final int newsText=0x7f060034;
-        public static final int newsTitle=0x7f060033;
+        public static final int mapview=0x7f06001b;
+        public static final int myFragment=0x7f06001e;
+        public static final int newsArrow=0x7f060038;
+        public static final int newsImage=0x7f060035;
+        public static final int newsText=0x7f060037;
+        public static final int newsTitle=0x7f060036;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
-        public static final int placeDetails=0x7f060030;
-        public static final int placeTitle=0x7f06002f;
-        public static final int read_news_text=0x7f060028;
-        public static final int read_news_text2=0x7f060029;
-        public static final int read_news_title=0x7f060027;
-        public static final int readnewsBtnCall=0x7f06002d;
-        public static final int readnewsBtnGrads=0x7f06002a;
-        public static final int readnewsBtnInfo=0x7f06002e;
-        public static final int readnewsBtnPin=0x7f06002c;
-        public static final int readnewsBtnSpeech=0x7f06002b;
-        public static final int retourLayout=0x7f060025;
+        public static final int placeDetails=0x7f060033;
+        public static final int placeTitle=0x7f060032;
+        public static final int read_news_text=0x7f06002a;
+        public static final int read_news_title=0x7f060029;
+        public static final int read_news_title_image=0x7f060028;
+        public static final int readnewsBtnCall=0x7f060030;
+        public static final int readnewsBtnGrads=0x7f06002d;
+        public static final int readnewsBtnInfo=0x7f060031;
+        public static final int readnewsBtnPin=0x7f06002f;
+        public static final int readnewsBtnSpeech=0x7f06002e;
+        public static final int readnewsFooterText=0x7f06002c;
+        public static final int retourLayout=0x7f060026;
         public static final int satellite=0x7f060002;
         public static final int scrollView1=0x7f060005;
-        public static final int scrollViewReadNews=0x7f060026;
+        public static final int scrollViewReadNews=0x7f060027;
         public static final int startButton1=0x7f06000c;
         public static final int startButton2=0x7f06000f;
         public static final int startButton3=0x7f060012;
         public static final int startButton4=0x7f060015;
         public static final int terrain=0x7f060003;
-        public static final int titleTextView=0x7f06001b;
-        public static final int viewBtnCall=0x7f060022;
-        public static final int viewBtnGrads=0x7f06001f;
-        public static final int viewBtnInfo=0x7f060023;
-        public static final int viewBtnPin=0x7f060021;
-        public static final int viewBtnSpeech=0x7f060020;
+        public static final int titleTextView=0x7f06001c;
+        public static final int viewBtnCall=0x7f060023;
+        public static final int viewBtnGrads=0x7f060020;
+        public static final int viewBtnInfo=0x7f060024;
+        public static final int viewBtnPin=0x7f060022;
+        public static final int viewBtnSpeech=0x7f060021;
         public static final int webviewInfo=0x7f06000b;
+        public static final int webviewReadNews=0x7f06002b;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f080000;

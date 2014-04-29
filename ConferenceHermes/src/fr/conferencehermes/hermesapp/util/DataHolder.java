@@ -13,6 +13,7 @@ public class DataHolder {
 	private String aboutURL;
 	private String infoURL;
 	private String phone;
+	private String joinURL;
 
 	private DataHolder() {
 		setNewsArray(new ArrayList<News>());
@@ -22,6 +23,7 @@ public class DataHolder {
 		setAboutURL("");
 		setInfoURL("");
 		setPhone("");
+		setJoinURL("");
 	}
 
 	public static DataHolder getInstance() {
@@ -86,5 +88,13 @@ public class DataHolder {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public String getJoinURL() {
+		return joinURL;
+	}
+
+	public void setJoinURL(String joinURL) {
+		this.joinURL = joinURL;
 	}
 }

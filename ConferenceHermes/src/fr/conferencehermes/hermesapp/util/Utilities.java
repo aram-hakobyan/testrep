@@ -16,12 +16,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
-import com.conferencehermes.hermesapp.fragments.InfoFragment;
-import com.conferencehermes.hermesapp.fragments.MapFragment;
-import com.conferencehermes.hermesapp.fragments.NewsFragment;
-
 import fr.conferencehermes.hermesapp.R;
+import fr.conferencehermes.hermesapp.fragments.InfoFragment;
+import fr.conferencehermes.hermesapp.fragments.MapFragment;
+import fr.conferencehermes.hermesapp.fragments.NewsFragment;
 
 public class Utilities {
 	private static ProgressDialog mDialog;
@@ -78,8 +76,10 @@ public class Utilities {
 
 		Dialog dialog = new Dialog(context);
 		// dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		dialog.getWindow().clearFlags(
-				WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+		/*
+		 * dialog.getWindow().clearFlags(
+		 * WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+		 */
 		dialog.getWindow().setGravity(Gravity.CENTER);
 		dialog.getWindow().setBackgroundDrawableResource(android.R.color.white);
 
@@ -105,24 +105,12 @@ public class Utilities {
 		WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
 		Window window = dialog.getWindow();
 		lp.copyFrom(window.getAttributes());
-		lp.width = WindowManager.LayoutParams.MATCH_PARENT;
-		lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+		lp.width = (int) context.getResources().getDimension(
+				R.dimen.info_dialog_w);
+		lp.height = (int) context.getResources().getDimension(
+				R.dimen.info_dialog_h);
 		window.setAttributes(lp);
 
-		/*
-		 * AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
-		 * 
-		 * WebView wv = new WebView(context);
-		 * wv.loadUrl(DataHolder.getInstance().getInfoURL() + "&" +
-		 * Constants.AUTH_TOKEN); wv.setWebViewClient(new WebViewClient() {
-		 * 
-		 * @Override public boolean shouldOverrideUrlLoading(WebView view,
-		 * String url) { view.loadUrl(url);
-		 * 
-		 * return true; } });
-		 * 
-		 * alertDialog.setView(wv); alertDialog.show();
-		 */
 	}
 
 	public static boolean isNetworkAvailable(Context context) {
