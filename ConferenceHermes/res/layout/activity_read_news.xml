@@ -74,7 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="140dp" >
+        android:layout_marginTop="100dp" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,6 +91,7 @@
                     android:layout_width="@dimen/readnews_image_w"
                     android:layout_height="@dimen/readnews_image_h"
                     android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/news_image_left" >
                 </ImageView>
 
@@ -126,7 +127,8 @@
                 android:id="@+id/webviewReadNews"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp" />
+                android:layout_marginBottom="60dp"
+                android:paddingTop="30dp" />
         </LinearLayout>
     </ScrollView>
 

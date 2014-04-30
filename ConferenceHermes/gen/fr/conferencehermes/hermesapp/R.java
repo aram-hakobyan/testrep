@@ -190,11 +190,7 @@ containing a value of this type.
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
  Default screen margins, per the Android Design guidelines. 
-
-         Example customization of dimensions originally defined in res/values/dimens.xml
-         (such as screen margins) for screens with more than 820dp of available width. This
-         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
-    
+ Default screen margins, per the Android Design guidelines. 
  Default screen margins, per the Android Design guidelines. 
  Default screen margins, per the Android Design guidelines. 
          */
@@ -217,6 +213,10 @@ containing a value of this type.
         public static final int menu_title_size=0x7f09000c;
         public static final int news_image_width=0x7f090011;
         public static final int news_right_margin=0x7f090012;
+        public static final int place_dialog_details=0x7f09001a;
+        public static final int place_dialog_padding_bottom=0x7f09001b;
+        public static final int place_dialog_padding_left=0x7f09001c;
+        public static final int place_dialog_title=0x7f090019;
         public static final int readnews_image_h=0x7f090014;
         public static final int readnews_image_w=0x7f090013;
         public static final int readnewslinemargin=0x7f090018;
@@ -265,11 +265,12 @@ containing a value of this type.
         public static final int main_menu_btn_3=0x7f020025;
         public static final int main_menu_btn_4=0x7f020026;
         public static final int map_pin=0x7f020027;
-        public static final int news_image_left=0x7f020028;
-        public static final int news_image_right=0x7f020029;
-        public static final int phone=0x7f02002a;
-        public static final int pin_white=0x7f02002b;
-        public static final int speech_bubble=0x7f02002c;
+        public static final int map_pin_blue=0x7f020028;
+        public static final int news_image_left=0x7f020029;
+        public static final int news_image_right=0x7f02002a;
+        public static final int phone=0x7f02002b;
+        public static final int pin_white=0x7f02002c;
+        public static final int speech_bubble=0x7f02002d;
     }
     public static final class id {
         public static final int action_settings=0x7f060039;

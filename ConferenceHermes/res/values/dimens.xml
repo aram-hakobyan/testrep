@@ -28,5 +28,10 @@
     <dimen name="readnewstextsize">20sp</dimen>      
     <dimen name="retour_height">60dp</dimen>
     <dimen name="readnewslinemargin">120dp</dimen>
+    
+    <dimen name="place_dialog_title">35sp</dimen>
+    <dimen name="place_dialog_details">30sp</dimen>
+    <dimen name="place_dialog_padding_bottom">150dp</dimen>
+    <dimen name="place_dialog_padding_left">50dp</dimen>
 
 </resources>
