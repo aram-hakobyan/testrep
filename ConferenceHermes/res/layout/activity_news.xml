@@ -8,7 +8,9 @@
     <ListView
         android:id="@+id/listViewNews"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:divider="@color/app_main_color"
+        android:dividerHeight="1dp" >
     </ListView>
 
 </RelativeLayout>
