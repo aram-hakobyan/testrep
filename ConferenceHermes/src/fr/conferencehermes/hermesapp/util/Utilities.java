@@ -26,9 +26,11 @@ public class Utilities {
 
 	public static void phoneCall(Context context) {
 		Intent callIntent = new Intent(Intent.ACTION_CALL);
-		callIntent.setData(Uri.parse("tel:"
-				+ DataHolder.getInstance().getPhone()));
-		context.startActivity(callIntent);
+		String number = DataHolder.getInstance().getPhone();
+		if (!number.equalsIgnoreCase("")) {
+			callIntent.setData(Uri.parse("tel:" + number));
+			context.startActivity(callIntent);
+		}
 	};
 
 	public static void selectFrag(FragmentActivity a, int PAGE_ID) {

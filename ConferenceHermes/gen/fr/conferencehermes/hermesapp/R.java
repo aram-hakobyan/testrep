@@ -196,8 +196,8 @@ containing a value of this type.
          */
         public static final int activity_horizontal_margin=0x7f090000;
         public static final int activity_vertical_margin=0x7f090001;
-        public static final int info_dialog_h=0x7f090010;
-        public static final int info_dialog_w=0x7f09000f;
+        public static final int info_dialog_h=0x7f090011;
+        public static final int info_dialog_w=0x7f090010;
         public static final int join_button_h=0x7f090007;
         public static final int join_button_marginbottom=0x7f09000a;
         public static final int join_button_textsize=0x7f090009;
@@ -207,22 +207,23 @@ containing a value of this type.
         public static final int main_buttons_textsize=0x7f090005;
         public static final int main_buttons_topmargin=0x7f090004;
         public static final int main_buttons_width=0x7f090002;
+        public static final int menu_button_margin=0x7f09000c;
         public static final int menu_button_size=0x7f09000b;
-        public static final int menu_footer_title_size=0x7f09000d;
-        public static final int menu_margin=0x7f09000e;
-        public static final int menu_title_size=0x7f09000c;
-        public static final int news_image_width=0x7f090011;
-        public static final int news_right_margin=0x7f090012;
-        public static final int place_dialog_details=0x7f09001a;
-        public static final int place_dialog_padding_bottom=0x7f09001b;
-        public static final int place_dialog_padding_left=0x7f09001c;
-        public static final int place_dialog_title=0x7f090019;
-        public static final int readnews_image_h=0x7f090014;
-        public static final int readnews_image_w=0x7f090013;
-        public static final int readnewslinemargin=0x7f090018;
-        public static final int readnewstextsize=0x7f090016;
-        public static final int retour_height=0x7f090017;
-        public static final int retour_size=0x7f090015;
+        public static final int menu_footer_title_size=0x7f09000e;
+        public static final int menu_margin=0x7f09000f;
+        public static final int menu_title_size=0x7f09000d;
+        public static final int news_image_width=0x7f090012;
+        public static final int news_right_margin=0x7f090013;
+        public static final int place_dialog_details=0x7f09001b;
+        public static final int place_dialog_padding_bottom=0x7f09001c;
+        public static final int place_dialog_padding_left=0x7f09001d;
+        public static final int place_dialog_title=0x7f09001a;
+        public static final int readnews_image_h=0x7f090015;
+        public static final int readnews_image_w=0x7f090014;
+        public static final int readnewslinemargin=0x7f090019;
+        public static final int readnewstextsize=0x7f090017;
+        public static final int retour_height=0x7f090018;
+        public static final int retour_size=0x7f090016;
     }
     public static final class drawable {
         public static final int back_arrow=0x7f020000;

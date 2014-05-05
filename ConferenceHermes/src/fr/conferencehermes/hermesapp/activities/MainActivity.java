@@ -32,6 +32,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.Toast;
 import fr.conferencehermes.hermesapp.R;
 import fr.conferencehermes.hermesapp.util.Constants;
 import fr.conferencehermes.hermesapp.util.DataHolder;
@@ -97,8 +98,14 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			startActivity(browserIntent);
 			break;
 		}
-		if (intent != null)
-			startActivity(intent);
+		if (intent != null) {
+			if (Utilities.isNetworkAvailable(MainActivity.this)) {
+				startActivity(intent);
+			} else {
+				Toast.makeText(MainActivity.this, "No network available",
+						Toast.LENGTH_LONG).show();
+			}
+		}
 	}
 
 	class downloadAsyncTask extends AsyncTask<String, String, String> {

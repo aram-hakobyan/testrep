@@ -85,7 +85,7 @@
                 android:id="@+id/viewBtnSpeech"
                 android:layout_width="@dimen/menu_button_size"
                 android:layout_height="@dimen/menu_button_size"
-                android:layout_marginLeft="@dimen/menu_button_size"
+                android:layout_marginLeft="@dimen/menu_button_margin"
                 android:src="@drawable/speech_bubble" >
             </ImageView>
 
@@ -93,7 +93,7 @@
                 android:id="@+id/viewBtnPin"
                 android:layout_width="@dimen/menu_button_size"
                 android:layout_height="@dimen/menu_button_size"
-                android:layout_marginLeft="@dimen/menu_button_size"
+                android:layout_marginLeft="@dimen/menu_button_margin"
                 android:src="@drawable/map_pin" >
             </ImageView>
 
@@ -101,7 +101,7 @@
                 android:id="@+id/viewBtnCall"
                 android:layout_width="@dimen/menu_button_size"
                 android:layout_height="@dimen/menu_button_size"
-                android:layout_marginLeft="@dimen/menu_button_size"
+                android:layout_marginLeft="@dimen/menu_button_margin"
                 android:src="@drawable/phone" >
             </ImageView>
 
@@ -109,7 +109,7 @@
                 android:id="@+id/viewBtnInfo"
                 android:layout_width="@dimen/menu_button_size"
                 android:layout_height="@dimen/menu_button_size"
-                android:layout_marginLeft="@dimen/menu_button_size"
+                android:layout_marginLeft="@dimen/menu_button_margin"
                 android:src="@drawable/info_button" >
             </ImageView>
         </LinearLayout>
