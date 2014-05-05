@@ -274,7 +274,7 @@ containing a value of this type.
         public static final int speech_bubble=0x7f02002d;
     }
     public static final class id {
-        public static final int action_settings=0x7f060039;
+        public static final int action_settings=0x7f06003a;
         public static final int contactBtnCall=0x7f060009;
         public static final int contactBtnGrads=0x7f060006;
         public static final int contactBtnInfo=0x7f06000a;
@@ -283,7 +283,7 @@ containing a value of this type.
         public static final int footer_menu_text=0x7f06001f;
         public static final int fragmentContainer=0x7f06001d;
         public static final int hybrid=0x7f060004;
-        public static final int infoDialogTitle=0x7f060034;
+        public static final int infoDialogTitle=0x7f060035;
         public static final int joinButton=0x7f060018;
         public static final int listViewNews=0x7f060025;
         public static final int mainFooterText=0x7f06001a;
@@ -298,27 +298,28 @@ containing a value of this type.
         public static final int main_menu_text4=0x7f060017;
         public static final int mapview=0x7f06001b;
         public static final int myFragment=0x7f06001e;
-        public static final int newsArrow=0x7f060038;
-        public static final int newsImage=0x7f060035;
-        public static final int newsText=0x7f060037;
-        public static final int newsTitle=0x7f060036;
+        public static final int newsArrow=0x7f060039;
+        public static final int newsImage=0x7f060036;
+        public static final int newsText=0x7f060038;
+        public static final int newsTitle=0x7f060037;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
-        public static final int placeDetails=0x7f060033;
-        public static final int placeTitle=0x7f060032;
-        public static final int read_news_text=0x7f06002a;
-        public static final int read_news_title=0x7f060029;
-        public static final int read_news_title_image=0x7f060028;
-        public static final int readnewsBtnCall=0x7f060030;
-        public static final int readnewsBtnGrads=0x7f06002d;
-        public static final int readnewsBtnInfo=0x7f060031;
-        public static final int readnewsBtnPin=0x7f06002f;
-        public static final int readnewsBtnSpeech=0x7f06002e;
-        public static final int readnewsFooterText=0x7f06002c;
+        public static final int placeDetails=0x7f060034;
+        public static final int placeTitle=0x7f060033;
+        public static final int readNewsLine=0x7f060027;
+        public static final int read_news_text=0x7f06002b;
+        public static final int read_news_title=0x7f06002a;
+        public static final int read_news_title_image=0x7f060029;
+        public static final int readnewsBtnCall=0x7f060031;
+        public static final int readnewsBtnGrads=0x7f06002e;
+        public static final int readnewsBtnInfo=0x7f060032;
+        public static final int readnewsBtnPin=0x7f060030;
+        public static final int readnewsBtnSpeech=0x7f06002f;
+        public static final int readnewsFooterText=0x7f06002d;
         public static final int retourLayout=0x7f060026;
         public static final int satellite=0x7f060002;
         public static final int scrollView1=0x7f060005;
-        public static final int scrollViewReadNews=0x7f060027;
+        public static final int scrollViewReadNews=0x7f060028;
         public static final int startButton1=0x7f06000c;
         public static final int startButton2=0x7f06000f;
         public static final int startButton3=0x7f060012;
@@ -331,7 +332,7 @@ containing a value of this type.
         public static final int viewBtnPin=0x7f060022;
         public static final int viewBtnSpeech=0x7f060021;
         public static final int webviewInfo=0x7f06000b;
-        public static final int webviewReadNews=0x7f06002b;
+        public static final int webviewReadNews=0x7f06002c;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f080000;
