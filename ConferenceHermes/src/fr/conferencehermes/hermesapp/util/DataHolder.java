@@ -9,21 +9,25 @@ public class DataHolder {
 	private ArrayList<News> newsArray;
 	private ArrayList<Location> locations;
 	private ArrayList<Place> places;
+	private ArrayList<String> titles;
 	private int CURRENT_PAGE;
 	private String aboutURL;
 	private String infoURL;
 	private String phone;
 	private String joinURL;
+	private String phoneURL;
 
 	private DataHolder() {
 		setNewsArray(new ArrayList<News>());
 		setLocations(new ArrayList<Location>());
 		setPlaces(new ArrayList<Place>());
+		setTitles(new ArrayList<String>());
 		setCURRENT_PAGE(0);
 		setAboutURL("");
 		setInfoURL("");
 		setPhone("");
 		setJoinURL("");
+		setPhoneURL("");
 	}
 
 	public static DataHolder getInstance() {
@@ -96,5 +100,21 @@ public class DataHolder {
 
 	public void setJoinURL(String joinURL) {
 		this.joinURL = joinURL;
+	}
+
+	public String getPhoneURL() {
+		return phoneURL;
+	}
+
+	public void setPhoneURL(String phoneURL) {
+		this.phoneURL = phoneURL;
+	}
+
+	public ArrayList<String> getTitles() {
+		return titles;
+	}
+
+	public void setTitles(ArrayList<String> titles) {
+		this.titles = titles;
 	}
 }

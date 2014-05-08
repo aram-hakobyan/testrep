@@ -30,6 +30,8 @@ public class Utilities {
 		if (!number.equalsIgnoreCase("")) {
 			callIntent.setData(Uri.parse("tel:" + number));
 			context.startActivity(callIntent);
+		} else {
+			showPhoneDialog(context);
 		}
 	};
 
@@ -97,6 +99,47 @@ public class Utilities {
 			}
 		});
 		dialog.setTitle("Info");
+		dialog.setContentView(wv);
+
+		if (!dialog.isShowing())
+			dialog.show();
+		else
+			dialog.dismiss();
+
+		WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+		Window window = dialog.getWindow();
+		lp.copyFrom(window.getAttributes());
+		lp.width = (int) context.getResources().getDimension(
+				R.dimen.info_dialog_w);
+		lp.height = (int) context.getResources().getDimension(
+				R.dimen.info_dialog_h);
+		window.setAttributes(lp);
+
+	}
+
+	public static void showPhoneDialog(Context context) {
+
+		Dialog dialog = new Dialog(context);
+		dialog.getWindow().setGravity(Gravity.CENTER);
+		dialog.getWindow().setBackgroundDrawableResource(android.R.color.white);
+
+		WebView wv = new WebView(context);
+		wv.loadUrl(DataHolder.getInstance().getPhoneURL() + "&"
+				+ Constants.AUTH_TOKEN);
+		wv.setWebViewClient(new WebViewClient() {
+			@Override
+			public boolean shouldOverrideUrlLoading(WebView view, String url) {
+				view.loadUrl(url);
+
+				return true;
+			}
+		});
+
+		try {
+			dialog.setTitle(DataHolder.getInstance().getTitles().get(0));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		dialog.setContentView(wv);
 
 		if (!dialog.isShowing())

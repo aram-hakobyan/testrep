@@ -193,6 +193,8 @@ containing a value of this type.
  Default screen margins, per the Android Design guidelines. 
  Default screen margins, per the Android Design guidelines. 
  Default screen margins, per the Android Design guidelines. 
+ Default screen margins, per the Android Design guidelines. 
+ Default screen margins, per the Android Design guidelines. 
          */
         public static final int activity_horizontal_margin=0x7f090000;
         public static final int activity_vertical_margin=0x7f090001;
@@ -274,7 +276,7 @@ containing a value of this type.
         public static final int speech_bubble=0x7f02002d;
     }
     public static final class id {
-        public static final int action_settings=0x7f06003a;
+        public static final int action_settings=0x7f060039;
         public static final int contactBtnCall=0x7f060009;
         public static final int contactBtnGrads=0x7f060006;
         public static final int contactBtnInfo=0x7f06000a;
@@ -283,7 +285,6 @@ containing a value of this type.
         public static final int footer_menu_text=0x7f06001f;
         public static final int fragmentContainer=0x7f06001d;
         public static final int hybrid=0x7f060004;
-        public static final int infoDialogTitle=0x7f060035;
         public static final int joinButton=0x7f060018;
         public static final int listViewNews=0x7f060025;
         public static final int mainFooterText=0x7f06001a;
@@ -298,10 +299,10 @@ containing a value of this type.
         public static final int main_menu_text4=0x7f060017;
         public static final int mapview=0x7f06001b;
         public static final int myFragment=0x7f06001e;
-        public static final int newsArrow=0x7f060039;
-        public static final int newsImage=0x7f060036;
-        public static final int newsText=0x7f060038;
-        public static final int newsTitle=0x7f060037;
+        public static final int newsArrow=0x7f060038;
+        public static final int newsImage=0x7f060035;
+        public static final int newsText=0x7f060037;
+        public static final int newsTitle=0x7f060036;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
         public static final int placeDetails=0x7f060034;
@@ -346,10 +347,7 @@ containing a value of this type.
         public static final int activity_news=0x7f030005;
         public static final int activity_read_news=0x7f030006;
         public static final int dialog_place=0x7f030007;
-        public static final int fragment_my=0x7f030008;
-        public static final int fragment_tab=0x7f030009;
-        public static final int info_dialog=0x7f03000a;
-        public static final int news_item=0x7f03000b;
+        public static final int news_item=0x7f030008;
     }
     public static final class menu {
         public static final int contact=0x7f0b0000;

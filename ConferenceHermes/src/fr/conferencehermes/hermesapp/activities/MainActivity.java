@@ -222,6 +222,15 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 				DataHolder.getInstance().setPhone(jObject.getString("phone"));
 				DataHolder.getInstance().setJoinURL(
 						jObject.getString("join_us"));
+				DataHolder.getInstance().setPhoneURL(
+						jObject.getString("phone_number_text"));
+
+				JSONArray titlesArray = jObject.getJSONArray("titles");
+				ArrayList<String> titles = new ArrayList<String>();
+				for (int k = 0; k < titlesArray.length(); k++) {
+					titles.add(titlesArray.getString(k));
+				}
+				DataHolder.getInstance().setTitles(titles);
 
 			} catch (JSONException e) {
 				Log.e("JSONException", "Error: " + e.toString());

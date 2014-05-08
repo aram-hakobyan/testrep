@@ -107,7 +107,7 @@ int drawable news_image_right 0x7f02002a
 int drawable phone 0x7f02002b
 int drawable pin_white 0x7f02002c
 int drawable speech_bubble 0x7f02002d
-int id action_settings 0x7f06003a
+int id action_settings 0x7f060039
 int id contactBtnCall 0x7f060009
 int id contactBtnGrads 0x7f060006
 int id contactBtnInfo 0x7f06000a
@@ -116,7 +116,6 @@ int id contactBtnSpeech 0x7f060007
 int id footer_menu_text 0x7f06001f
 int id fragmentContainer 0x7f06001d
 int id hybrid 0x7f060004
-int id infoDialogTitle 0x7f060035
 int id joinButton 0x7f060018
 int id listViewNews 0x7f060025
 int id mainFooterText 0x7f06001a
@@ -131,10 +130,10 @@ int id main_menu_text3 0x7f060014
 int id main_menu_text4 0x7f060017
 int id mapview 0x7f06001b
 int id myFragment 0x7f06001e
-int id newsArrow 0x7f060039
-int id newsImage 0x7f060036
-int id newsText 0x7f060038
-int id newsTitle 0x7f060037
+int id newsArrow 0x7f060038
+int id newsImage 0x7f060035
+int id newsText 0x7f060037
+int id newsTitle 0x7f060036
 int id none 0x7f060000
 int id normal 0x7f060001
 int id placeDetails 0x7f060034
@@ -175,10 +174,7 @@ int layout activity_my_fragment 0x7f030004
 int layout activity_news 0x7f030005
 int layout activity_read_news 0x7f030006
 int layout dialog_place 0x7f030007
-int layout fragment_my 0x7f030008
-int layout fragment_tab 0x7f030009
-int layout info_dialog 0x7f03000a
-int layout news_item 0x7f03000b
+int layout news_item 0x7f030008
 int menu contact 0x7f0b0000
 int menu info 0x7f0b0001
 int menu main 0x7f0b0002
