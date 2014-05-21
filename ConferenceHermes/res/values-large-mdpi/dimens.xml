@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="main_buttons_width">170dp</dimen>
+    <dimen name="main_buttons_height">200dp</dimen>
+    <dimen name="main_buttons_topmargin">70dp</dimen>
+    <dimen name="main_buttons_textsize">12sp</dimen>
+    <dimen name="main_buttons_leftmargin">20dp</dimen>
+    <dimen name="join_button_h">50dp</dimen>
+    <dimen name="join_button_w">200dp</dimen>
+    <dimen name="join_button_textsize">14sp</dimen>
+    <dimen name="join_button_marginbottom">120dp</dimen>
+    <dimen name="menu_button_size">20dp</dimen>
+    <dimen name="menu_button_margin">10dp</dimen>
+    <dimen name="menu_title_size">16sp</dimen>
+    <dimen name="menu_footer_title_size">10sp</dimen>
+    <dimen name="menu_margin">5dp</dimen>
+    <dimen name="info_dialog_w">500px</dimen>
+    <dimen name="info_dialog_h">600px</dimen>
+    <dimen name="news_image_width">90dp</dimen>
+    <dimen name="news_right_margin">25dp</dimen>
+    <dimen name="readnews_image_w">80dp</dimen>
+    <dimen name="readnews_image_h">50dp</dimen>
+    <dimen name="retour_size">20sp</dimen>
+    <dimen name="readnewstextsize">15sp</dimen>
+    <dimen name="retour_height">50dp</dimen>
+    <dimen name="readnewslinemargin">100dp</dimen>
+    <dimen name="place_dialog_title">25sp</dimen>
+    <dimen name="place_dialog_details">20sp</dimen>
+    <dimen name="place_dialog_padding_bottom">50dp</dimen>
+    <dimen name="place_dialog_padding_left">40dp</dimen>
+
+</resources>
