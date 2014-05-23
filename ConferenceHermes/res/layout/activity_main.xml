@@ -23,157 +23,173 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/main_buttons_topmargin"
-        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="12"
             android:gravity="center"
-            android:orientation="horizontal" >
+            android:orientation="vertical" >
 
-            <RelativeLayout
-                android:id="@+id/startButton1"
-                android:layout_width="@dimen/main_buttons_width"
-                android:layout_height="@dimen/main_buttons_height"
-                android:background="@drawable/main_menu_btn_1" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
 
-                <ImageView
-                    android:id="@+id/main_menu_image1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
-                    android:background="@android:color/transparent" />
+                <RelativeLayout
+                    android:id="@+id/startButton1"
+                    android:layout_width="@dimen/main_buttons_width"
+                    android:layout_height="@dimen/main_buttons_height"
+                    android:background="@drawable/main_menu_btn_1" >
 
-                <TextView
-                    android:id="@+id/main_menu_text1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="30dp"
-                    android:gravity="center"
-                    android:text="@string/main_menu_text1"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/main_buttons_textsize" />
-            </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/main_menu_image1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@android:color/transparent" />
 
-            <RelativeLayout
-                android:id="@+id/startButton2"
-                android:layout_width="@dimen/main_buttons_width"
-                android:layout_height="@dimen/main_buttons_height"
-                android:layout_marginLeft="@dimen/main_buttons_leftmargin"
-                android:background="@drawable/main_menu_btn_2" >
+                    <TextView
+                        android:id="@+id/main_menu_text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/main_menu_text1"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/main_buttons_textsize" />
+                </RelativeLayout>
 
-                <ImageView
-                    android:id="@+id/main_menu_image2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
-                    android:background="@android:color/transparent" />
+                <RelativeLayout
+                    android:id="@+id/startButton2"
+                    android:layout_width="@dimen/main_buttons_width"
+                    android:layout_height="@dimen/main_buttons_height"
+                    android:layout_marginLeft="@dimen/main_buttons_leftmargin"
+                    android:background="@drawable/main_menu_btn_2" >
 
-                <TextView
-                    android:id="@+id/main_menu_text2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="30dp"
-                    android:gravity="center"
-                    android:text="@string/main_menu_text2"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/main_buttons_textsize" />
-            </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/main_menu_image2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@android:color/transparent" />
+
+                    <TextView
+                        android:id="@+id/main_menu_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/main_menu_text2"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/main_buttons_textsize" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/startButton3"
+                    android:layout_width="@dimen/main_buttons_width"
+                    android:layout_height="@dimen/main_buttons_height"
+                    android:background="@drawable/main_menu_btn_3" >
+
+                    <ImageView
+                        android:id="@+id/main_menu_image3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@android:color/transparent" />
+
+                    <TextView
+                        android:id="@+id/main_menu_text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/main_menu_text3"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/main_buttons_textsize" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/startButton4"
+                    android:layout_width="@dimen/main_buttons_width"
+                    android:layout_height="@dimen/main_buttons_height"
+                    android:layout_marginLeft="@dimen/main_buttons_leftmargin"
+                    android:background="@drawable/main_menu_btn_4" >
+
+                    <ImageView
+                        android:id="@+id/main_menu_image4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@android:color/transparent" />
+
+                    <TextView
+                        android:id="@+id/main_menu_text4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/main_menu_text4"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/main_buttons_textsize" />
+                </RelativeLayout>
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:orientation="horizontal" >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.5" >
 
-            <RelativeLayout
-                android:id="@+id/startButton3"
-                android:layout_width="@dimen/main_buttons_width"
-                android:layout_height="@dimen/main_buttons_height"
-                android:background="@drawable/main_menu_btn_3" >
-
-                <ImageView
-                    android:id="@+id/main_menu_image3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
-                    android:background="@android:color/transparent" />
-
-                <TextView
-                    android:id="@+id/main_menu_text3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="30dp"
-                    android:gravity="center"
-                    android:text="@string/main_menu_text3"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/main_buttons_textsize" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/startButton4"
-                android:layout_width="@dimen/main_buttons_width"
-                android:layout_height="@dimen/main_buttons_height"
-                android:layout_marginLeft="@dimen/main_buttons_leftmargin"
-                android:background="@drawable/main_menu_btn_4" >
-
-                <ImageView
-                    android:id="@+id/main_menu_image4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
-                    android:background="@android:color/transparent" />
-
-                <TextView
-                    android:id="@+id/main_menu_text4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="30dp"
-                    android:gravity="center"
-                    android:text="@string/main_menu_text4"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/main_buttons_textsize" />
-            </RelativeLayout>
-        </LinearLayout>
+            <Button
+                android:id="@+id/joinButton"
+                android:layout_width="@dimen/join_button_w"
+                android:layout_height="@dimen/join_button_h"                
+                android:background="@drawable/green_btn_main"
+                android:gravity="center"
+                android:paddingLeft="70dp"
+                android:text="@string/register_button_text"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/join_button_textsize" >
+            </Button>
+        </RelativeLayout>
     </LinearLayout>
-
-    <Button
-        android:id="@+id/joinButton"
-        android:layout_width="@dimen/join_button_w"
-        android:layout_height="@dimen/join_button_h"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/join_button_marginbottom"
-        android:background="@drawable/green_btn_main"
-        android:gravity="center"
-        android:paddingLeft="70dp"
-        android:text="@string/register_button_text"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/join_button_textsize" >
-    </Button>
 
     <RelativeLayout
         android:layout_width="match_parent"

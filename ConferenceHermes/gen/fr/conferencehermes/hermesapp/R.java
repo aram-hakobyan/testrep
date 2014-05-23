@@ -195,8 +195,6 @@ containing a value of this type.
  Default screen margins, per the Android Design guidelines. 
  Default screen margins, per the Android Design guidelines. 
  Default screen margins, per the Android Design guidelines. 
- Default screen margins, per the Android Design guidelines. 
- Default screen margins, per the Android Design guidelines. 
          */
         public static final int activity_horizontal_margin=0x7f090000;
         public static final int activity_vertical_margin=0x7f090001;
